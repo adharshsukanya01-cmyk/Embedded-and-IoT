@@ -55,7 +55,6 @@ Step 7: Save Your Work
 
 
 # Program
-
 //  include the library code
 #include <liquidCrystal.h>
 LiquidCrystal 1cd(12,11,5,4,3,2);
