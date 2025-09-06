@@ -56,19 +56,18 @@ Step 7: Save Your Work
 
 # Program
 
----
-To upload
-
 //  include the library code
 #include <liquidCrystal.h>
 LiquidCrystal 1cd(12,11,5,4,3,2);
 Float temp;
 Int tempin =A1;
 #define fan 9
-Void setup()
-{
+Void setup()   {
+// Giving Fan Current ….Making Fan Pin 9 For Output
 pinMode (fan,OUTPUT);
+// Setting LCD’s number of rows and columns and rows:
 lcd.begin(16,3);
+// Printing Message On The LCD
 lcd.setCursor(3,1);
 lcd.print(“Tech Point”);
 delay(1000);
@@ -96,11 +95,11 @@ delay(3000);
 lcd.clear();
 lcd.setCursor(2, 0);
 temp=analogRead(tempPin);
-temp= temp *0.48828125; ) 
+temp= temp *0.48828125; )  //Converting  Temperature
 lcd.setCursor(0,0);
 lcd.print(“TEMPERATURE=”);
 lcd.setCursor(5,1);
-lcd.print(temp);        
+lcd.print(temp);          //Printing  Temp
 delay(3000);
 lcd.clear();
 if (temp <20)
@@ -145,7 +144,6 @@ lcd.print(“Fan Speed: 100%  “);
 delay(2000);
 lcd.clear();
 }
-
 # Result
 
 ---
